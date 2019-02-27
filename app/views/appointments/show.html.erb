@@ -1,4 +1,4 @@
-<%= @appointment.appointment_datetime.strftime("%B %d, %Y") %><br>
+<%= @appointment.appointment_datetime.strftime("%B %e, %Y at %l:%M") %><br>
 <%= link_to @appointment.patient.name, patient_path %><br>
 <%= link_to @appointment.doctor.name, doctor_path %><br>
 
