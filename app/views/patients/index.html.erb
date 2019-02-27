@@ -1,0 +1,5 @@
+<% @patient.each do |pat| %>
+ <% p_name = pat.name %>
+ <% p_appointment = pat.appointments.count %>
+ <%= "Name: #{p_name} Number of Appointments: #{p_appointment}" %>
+<% end %>
