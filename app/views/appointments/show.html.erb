@@ -1,0 +1,5 @@
+<h1>Appointment: <%= @apt.id %></h1>
+
+<h2>Doctor: <%= link_to @apt.doctor.name, doctor_path(@apt.doctor) %> | Time: <%= @apt.appointment_datetime.strftime("%B %d, %Y") %> at <%= @apt.appointment_datetime.strftime("%R") %></h2>
+
+<h2>Patient: <%= link_to @apt.patient.name, patient_path(@apt.patient) %> | Time: <%= @apt.appointment_datetime.strftime("%B %d, %Y") %> at <%= @apt.appointment_datetime.strftime("%R") %></h2>
