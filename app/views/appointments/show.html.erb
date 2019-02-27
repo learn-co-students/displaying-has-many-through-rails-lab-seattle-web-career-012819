@@ -1,0 +1,6 @@
+<h1>Seattle Grace Hospital</h1>
+
+<h4>Appointment: </h4>
+<h5><%= @appointment.appointment_datetime.strftime("%B %d, %Y at %H:%M") %></h5>
+<p>Doctor: <%= link_to @appointment.doctor.name, doctor_path(@appointment.doctor) %></p>
+<p>Patient: <%= link_to @appointment.patient.name, patient_path(@appointment.patient) %></p>
