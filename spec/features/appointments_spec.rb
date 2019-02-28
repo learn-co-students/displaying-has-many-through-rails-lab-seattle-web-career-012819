@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+require 'pry'
 describe "appointments", type:  :feature do
   before do
     @hawkeye = Doctor.create({name: "Hawkeye Pierce", department: "Surgery"})
@@ -13,7 +13,9 @@ describe "appointments", type:  :feature do
   end
 
   it "should display an appointment's patient" do
+    # binding.pry
     visit appointment_path(@appointment)
+    # page.save_page
     expect(page).to have_link("Homer Simpson", href: patient_path(@homer))
   end
 
